@@ -1,0 +1,23 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <h1>Bem vindo</h1>
+    <h2>Portal de Tarefas</h2>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Login">
+    </form>
+    <p>Ainda não possui uma conta?<a href="{% url 'register' %}">Criar uma conta</a></p>
+</div>
+
+
+
+
+
+
+{% endblock content %}
